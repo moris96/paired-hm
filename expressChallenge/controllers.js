@@ -22,7 +22,6 @@ async function create(req, res){
 async function show(req, res){
     console.log(req.params.id)
     try{
-        // const index = Blog.forEach(i => i.id === req.params.id)
         const ind = Blog.findIndex(item => item.id == req.params.id)
         console.log(Blog[ind])
         res.status(200).json(Blog[ind])
